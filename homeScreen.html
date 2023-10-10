@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js"></script>
+
+
+</head>
+
+<body>
+    <center>
+        <h1>Development time ratio calculator</h1>
+
+        <p>please key in the first crack time and </p>
+        <p>Time First crack temperature Desired development%</p>
+
+        <!--roating time data collection -->
+        Roasting time <br />
+        <div style="font-size: 4rem;">
+            <input type="number" id="total-time-min" step="1" min="0" max="60" value="00"/>
+            :
+            <input type="number" id="total-time-sec" step="1" min="0" max="60" value="00"/>
+        </div>
+
+        <!--first crack time data collection -->
+        First crack time<br />
+        <div style="font-size: 4rem;">
+            <!--firstcrack time input-->
+            <input type="number" id="fc-min" step="1" min="0" max="60" value="00"/>
+            :
+            <input type="number" id="fc-sec" step="1" min="0" max="60" value="00"/>
+        </div>
+
+        <!-- desired development time -->
+        <div>
+            Desired development % <br />
+            <!--dev%-->
+            <input type="number" id="desireddevelopmentpercentage" min="1" max="100" /> <br />
+        </div>
+        <br />
+
+        <!--input-->
+        <input type="button" onclick="dtrCalculator()" value="calculate" />
+
+    </center>
+
+</body>
+
+</html>
