@@ -1,14 +1,7 @@
-function popup(inputId){
-    textOutput = document.getElementById(inputId);
-    inputValue = textoutput.value
-    alert(inputValue);
-    console.log(typeof inputId)
+function timeToSecondConverter(minInput, secInput){
+    let toatlTimeSec = ((minInput*60) + secInput)
+    return toatlTimeSec
  }
-
- function htmltextchange(targetTextId){
-
- }
-
 
  function dtrCalculator()
  {
@@ -44,8 +37,3 @@ function popup(inputId){
     //return dtr value so that later functions will have a number to work with
     return dtrValue
    }
-
-function timeToSecondConverter(minInput, secInput){
-   let toatlTimeSec = ((minInput*60) + secInput)
-   return toatlTimeSec
-}

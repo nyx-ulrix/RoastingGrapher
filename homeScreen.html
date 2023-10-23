@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 <head>
+    <title>Roasting Chart</title>
+    <!--references to external scripts-->
     <link rel="stylesheet" href="theme.css">
-    <script src="theme.js"></script>
-
+    <script src="roastingChart.js" type="module"></script>
+    <script src="dtrCalc.js"></script>
 
 </head>
 
@@ -14,7 +17,7 @@
 
         <p>please key in the first crack time and </p>
         <p>Time First crack temperature Desired development%</p>
-
+ 
         <!--roating time data collection -->
         Roasting time <br />
         <div style="font-size: 4rem;">
@@ -43,7 +46,15 @@
         <!--input-->
         <input type="button" onclick="dtrCalculator()" value="calculate" />
 
+        <!-- Roasting chart -->
+        <div class="container">
+            <div class="chart">
+                <canvas id="roastChart" style="width:100%;max-width:700px"></canvas>
+            </div>
+        </div>
+        
     </center>
+
 
 </body>
 
