@@ -22,8 +22,8 @@ function timeToSecondConverter(minInput, secInput){
 
     //shows the value in a popup
     //alert(Math.round(dtrValue) + "%");
-    var dtrDisplat = document.getElementById("desireddevelopmentpercentage");
-    dtrDisplat.value = (Math.round(dtrValue) + "%");
+    var dtrDisplay = document.getElementById("desireddevelopmentpercentage");
+    dtrDisplay.value = (Math.round(dtrValue) + "%");
     
     //return dtr value so that later functions will have a number to work with
     return dtrValue
