@@ -25,4 +25,37 @@ body {
     border: none;
   }
 
+  input[type=text] {
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #d5cbb9;
+    color:#2C1E07;
+    border: none;
+    text-align: center;
+
+    
+  }
+
+  button {
+    background-color: #d5cbb9;
+    border-radius: 25px;
+    color: #2C1E07;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    border-width:0px;
+    background-color: none;
+    border-color: none;
+    box-shadow: none;
+
+  }
+
+  .left {
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
   

@@ -3,7 +3,7 @@ function timeToSecondConverter(minInput, secInput){
     return toatlTimeSec
  }
 
- function dtrCalculator()
+ function manualDtrCalculator()
  {
    //get all of the necessary data from the 
    let totaleRoastTimeMin = parseInt(document.getElementById("total-time-min").value);
@@ -16,24 +16,24 @@ function timeToSecondConverter(minInput, secInput){
 
    //calculate the firstcrack time in minutes and seconds
    let firstCrackTime = (timeToSecondConverter(firstCrackTimeMin, firstCrackTimeSec));
-
-   //calculate the development time
-   let developmentTime = (totalRoastTime- firstCrackTime);
    
-   //calculate the dtr
-   let dtrValue = ((developmentTime /totalRoastTime)*100);
-
-    //return dtrvalue datatype
-   //  console.log(totalRoastTime);
-   //  console.log(firstCrackTime);
-   //  console.log(developmentTime);
-   //  console.log(dtrValue);
-   //  console.log(firstCrackTime);
-   //  console.log(dtrValue);
+   //uses the dtrFormula function to calculate the development time ratio 
+   let dtrValue = dtrFormula(totalRoastTime,firstCrackTime);
 
     //shows the value in a popup
-    alert(Math.round(dtrValue) + "%");
+    //alert(Math.round(dtrValue) + "%");
+    var dtrDisplat = document.getElementById("desireddevelopmentpercentage");
+    dtrDisplat.value = (Math.round(dtrValue) + "%");
     
     //return dtr value so that later functions will have a number to work with
     return dtrValue
+   }
+
+   function dtrFormula(roastTime,fcTime)
+   {
+    //calculate the development time
+    let developmentTime = (roastTime- fcTime);
+    //calculate the dtr
+    let dtrPercentage = ((developmentTime /roastTime)*100);
+    return dtrPercentage;
    }

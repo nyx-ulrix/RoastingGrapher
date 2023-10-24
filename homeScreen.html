@@ -8,53 +8,66 @@
     <link rel="stylesheet" href="theme.css">
     <script src="roastingChart.js" type="module"></script>
     <script src="dtrCalc.js"></script>
+    <script src="roastingTimer.js"></script>
 
 </head>
 
 <body>
-    <center>
-        <h1>Development time ratio calculator</h1>
-
-        <p>please key in the first crack time and </p>
-        <p>Time First crack temperature Desired development%</p>
- 
-        <!--roating time data collection -->
-        Roasting time <br />
-        <div style="font-size: 4rem;">
-            <input type="number" id="total-time-min" step="1" min="0" max="60" value="00"/>
-            :
-            <input type="number" id="total-time-sec" step="1" min="0" max="60" value="00"/>
-        </div>
-
-        <!--first crack time data collection -->
-        First crack time<br />
-        <div style="font-size: 4rem;">
-            <!--firstcrack time input-->
-            <input type="number" id="fc-min" step="1" min="0" max="60" value="00"/>
-            :
-            <input type="number" id="fc-sec" step="1" min="0" max="60" value="00"/>
-        </div>
-
-        <!-- desired development time -->
-        <div>
-            Desired development % <br />
-            <!--dev%-->
-            <input type="number" id="desireddevelopmentpercentage" min="1" max="100" /> <br />
-        </div>
-        <br />
-
-        <!--input-->
-        <input type="button" onclick="dtrCalculator()" value="calculate" />
-
+    <div align="left">
         <!-- Roasting chart -->
+        <h1>Roasting chart</h1>
         <div class="container">
             <div class="chart">
                 <canvas id="roastChart" style="width:100%;max-width:700px"></canvas>
             </div>
         </div>
-        
-    </center>
+    </div>
 
+    <div align="right">
+
+            <h1>Development time ratio calculator</h1>
+
+            <p>please key in the first crack time and </p>
+            <p>Time First crack temperature Desired development%</p>
+
+            <!--roating time data collection -->
+            Roasting time <br />
+            <div style="font-size: 4rem;">
+                <input type="text"  id="total-time-min" step="1" min="0" max="60" value="00"/>
+                :
+                <input type="text" id="total-time-sec" step="1" min="0" max="60" value="00"/>
+            </div>
+
+            <br/>
+
+            <!--first crack time data collection -->
+            First crack time<br />
+            <div style="font-size: 4rem;">
+                <!--firstcrack time input-->
+                <input type="text" id="fc-min" step="1" min="0" max="60" value="00"/>
+                :
+                <input type="text" id="fc-sec" step="1" min="0" max="60" value="00"/>
+            </div>
+            <br/>
+
+
+
+            <!-- desired development time -->
+            <div>
+                Desired development % <br />
+                <!--dev%-->
+                <input type="text" id="desireddevelopmentpercentage"/> <br />
+            </div>
+            <br />
+
+            <!--timer inputs-->
+            <button id="startStop" onclick="startStop()">Start</button>
+            <button id="reset" onclick="reset()">Reset</button>
+            <button id="logFC" onclick="logFirstCrack()">First Crack</button>
+
+            <!--claculate button-->
+            <button id="logFC" onclick="manualDtrCalculator()">Calculate DTR</button>
+    </div>
 
 </body>
 
